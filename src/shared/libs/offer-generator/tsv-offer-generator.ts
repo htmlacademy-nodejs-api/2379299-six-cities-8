@@ -26,22 +26,22 @@ export class TSVOfferGenerator implements OfferGenerator {
     const previewImagePath = getRandomItem<string>(this.mockData.previewImagePaths);
     const photos = getRandomItems<string>(this.mockData.photos).join(';');
     const isPremium = getRandomItem<string>(this.mockData.isPremium);
-    const isFavourites = getRandomItem<string>(this.mockData.isFavourites );
+    const isFavourites = getRandomItem<string>(this.mockData.isFavourites);
     const rating = generateRandomValue(MIN_RATING, MAX_RATING).toString();
     const housingType = getRandomItem<string>(this.mockData.housingTypes);
     const roomsCount = generateRandomValue(MIN_ROOMS, MAX_ROOMS).toString();
     const visitorsCount = generateRandomValue(MIN_VISITORS, MAX_VISITORS).toString();
     const prices = generateRandomValue(MIN_PRICE, MAX_PRICE).toString();
-    const conveniences = getRandomItems<string>(this.mockData.conveniences ).join(';');;
-    const name = getRandomItem<string>(this.mockData.name );
-    const email = getRandomItem<string>(this.mockData.email );
-    const avatar = getRandomItem<string>(this.mockData.avatar );
-    const password = getRandomItem<string>(this.mockData.password );
-    const type = getRandomItem<string>(this.mockData.type );
+    const conveniences = getRandomItems<string>(this.mockData.conveniences).join(';');
+    const name = getRandomItem<string>(this.mockData.name);
+    const email = getRandomItem<string>(this.mockData.email);
+    const avatar = getRandomItem<string>(this.mockData.avatar);
+    const password = getRandomItem<string>(this.mockData.password);
+    const type = getRandomItem<string>(this.mockData.type);
     const coordsCityPoints = this.mockData.coords;
-    const coordsPoint = coordsCityPoints.find(point => point.name === city);
+    const coordsPoint = coordsCityPoints.find((point) => point.name === city);
 
-    const coords = coordsPoint ?  getRandomItem<string>(coordsPoint.coords) : '-';
+    const coords = coordsPoint ? getRandomItem<string>(coordsPoint.coords) : '-';
     return [
       title, description, createdDate,
       city, previewImagePath, photos, isPremium, isFavourites,

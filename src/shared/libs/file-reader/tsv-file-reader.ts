@@ -45,28 +45,28 @@ export class TSVFileReader extends EventEmitter implements FileReader {
       city,
       previewImagePath,
       photos: this.parsePhotos(photos),
-      isPremium: isPremium ==='true',
-      isFavourites: isFavourites ==='true',
+      isPremium: isPremium === 'true',
+      isFavourites: isFavourites === 'true',
       rating: Number.parseInt(rating, 10),
       housingType: housingType as HousingType,
       roomsCount: Number.parseInt(roomsCount, 10),
       visitorsCount: Number.parseInt(visitorsCount, 10),
       price: Number.parseInt(price, 10),
       convenience: this.parseConvenience(convenience),
-      author: this.parseUser(name, email, avatarPath, password, type as UserType ),
+      author: this.parseUser(name, email, avatarPath, password, type as UserType),
       coords: this.parsCoords(coords)
     };
   }
 
   private parsePhotos(photosString: string): string [] {
-    return photosString.split(';').map((name) =>  name );
+    return photosString.split(';').map((name) => name);
   }
 
   private parseConvenience(convenienceString: string): ConvenienceType[] {
-    return convenienceString.split(';').map((name) => ( name as ConvenienceType ));
+    return convenienceString.split(';').map((name) => (name as ConvenienceType));
   }
 
-  private parseUser(name: string, email: string, avatarPath: string, password: string, type: UserType  ): User {
+  private parseUser(name: string, email: string, avatarPath: string, password: string, type: UserType): User {
     return { name, email, avatarPath, password, type };
   }
 
@@ -94,7 +94,7 @@ export class TSVFileReader extends EventEmitter implements FileReader {
 
       while ((nextLinePosition = remainingData.indexOf('\n')) >= 0) {
         const completeRow = remainingData.slice(0, nextLinePosition + 1);
-        console.log(JSON.stringify(remainingData), JSON.stringify(completeRow), "nextLinePosition = ", nextLinePosition)
+        console.log(JSON.stringify(remainingData), JSON.stringify(completeRow), 'nextLinePosition = ', nextLinePosition);
         remainingData = remainingData.slice(++nextLinePosition);
         importedRowCount++;
 
