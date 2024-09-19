@@ -1,7 +1,7 @@
 import { ConvenienceType } from './convenience-type.js';
 import { Coords } from './coords.js';
 import { HousingType } from './housing-type.js';
-import { User } from './user.js'
+import { User } from './user.js';
 
 export type Offer = {
   title: string;
