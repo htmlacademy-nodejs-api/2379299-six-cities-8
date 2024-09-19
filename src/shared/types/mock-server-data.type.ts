@@ -5,19 +5,19 @@ type CityCoords = {
 
 
 export type MockServerData = {
-  title: string[];
-  description: string[];
-  createdDate: string[];
-  city: string[];
-  previewImagePath: string[];
+  titles: string[];
+  descriptions: string[];
+  createdDates: string[];
+  cities: string[];
+  previewImagePaths: string[];
   photos: string[];
   isPremium: string[];
   isFavourites: string[];
-  rating: string[];
-  housingType: string[];
-  roomsCount: string[];
-  visitorsCount: string[];
-  price: string[];
+  ratings: string[];
+  housingTypes: string[];
+  roomsCounts: string[];
+  visitorsCounts: string[];
+  prices: string[];
   conveniences: string[];
   name: string[];
   email: string[];

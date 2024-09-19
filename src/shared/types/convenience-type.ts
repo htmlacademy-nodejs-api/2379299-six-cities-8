@@ -1,2 +1,9 @@
-export type ConvenienceType = 'Breakfast' | 'Air' | 'conditioning' | 'Laptop' | 'friendly' | 'workspace' | 'Baby' | 'seat' | 'Washer' | 'Towels' | 'Fridge'
-
+export enum ConvenienceType {
+  Breakfast = 'Breakfast',
+  AirConditioning = 'Air conditioning',
+  LaptopFriendlyWorkspace = 'Laptop friendly workspace',
+  BabySeat = 'Baby seat',
+  Washer = 'Washer',
+  Towels = 'Towels',
+  Fridge = 'Fridge',
+}
